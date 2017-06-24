@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="swipe" content="Swipe through matches and decide who you'd like to make contact with.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <!-- jQuery  -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- Materilaize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <title>gitUp Swipe Matches</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/jTinder.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-wrapper  teal teal lighten-2">
+        <a href="/" class="brand-logo left">gitUp</a>
+        <img src="./assets/img/logo_notxt_final.png" class="brand-logo center catopus"/>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/">Home</a></li>
+          <li><a href="profile">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="grid-example col s12 m6"><span class="flow-text">
+
+      <div class="wrap">
+        <!-- start jtinder container -->
+        <div id="tinderslide">
+          <ul>
+            <li class="pane1" id="paneId1">
+              <div class="img"><img id="paneId1Image" src=""/></div>
+              <div id="userInfo1"></div>
+              <div class="like"></div>
+              <div class="dislike"></div>
+            </li>
+            <li class="pane2" id="paneId2">
+              <div class="img"><img id="paneId2Image" src="" /></div>
+              <div id="userInfo2"></div>
+              <div class="like"></div>
+              <div class="dislike"></div>
+            </li>
+            <li class="pane3" id="paneId3">
+              <div class="img"><img id="paneId3Image" src="" /></div>
+              <div id="userInfo3"></div>
+              <div class="like"></div>
+              <div class="dislike"></div>
+            </li>
+            <li class="pane4" id="paneId4">
+              <div class="img"><img id="paneId4Image" src="" /></div>
+              <div id="userInfo4"></div>
+              <div class="like"></div>
+              <div class="dislike"></div>
+            </li>
+            <li class="pane5" id="paneId5">
+              <div class="img"><img id="paneId5Image" src="" /></div>
+              <div id="userInfo5"></div>
+              <div class="like"></div>
+              <div class="dislike"></div>
+            </li>           
+          </ul>
+        </div>
+        <!-- end jtinder container -->
+
+      </div>
+
+      <!-- jTinder trigger by buttons  -->
+      <div class="actions">
+        <a href="#" class="dislike"><i></i></a>
+        <a href="#" class="like"><i></i></a>
+      </div>
+
+      <!-- jTinder status text  -->
+      <div id="status"></div>
+
+      <!-- jQuery lib -->
+      <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+      <!-- transform2d lib -->
+      <script type="text/javascript" src="./assets/js/jquery.transform2d.js"></script>
+      <!-- jTinder lib -->
+      <script type="text/javascript" src="./assets/js/jquery.jTinder.js"></script>
+      <!-- jTinder initialization script -->
+      <script type="text/javascript" src="./assets/js/main.js"></script>
+
+      <script src="./assets/js/main.js"></script>
+    </body>
+    </html>

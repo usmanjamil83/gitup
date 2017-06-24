@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="questions" content="Answer some quick questions that describe your likes, and preferences.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <!-- jQuery  -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- Materilaize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Contact CSS File -->
+  <link rel="stylesheet" href="./assets/css/questions.css">
+
+  <title>gitUp Questions</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-wrapper  teal teal lighten-2">
+        <a href="/" class="brand-logo left">gitUp</a>
+        <img src="./assets/img/logo_notxt_final.png" class="brand-logo center catopus"/>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/">Home</a></li>
+          <li><a href="profile">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="grid-example col s12 m7">
+      <span class="flow-text">
+        <div class = "row">
+          <div class="col s12 m7 offset-m3">
+            <h3 class="center-align header" id="contactHeader">id = "You"</h3>
+            <p class="center-align header" id="contactSubheader">Tell the world about #You</p>
+            <p class="center-align header" id="contactMessage">Please pick one of two from each of the six pairs below.</p>
+            <p class="center-align header" id="contactMessage2">We'll use your picks to find someone for you to gitUp with ;-)</p>
+          </div>
+        </div>
+        <!-- Code below is a form for the user questions -->
+        <div class="row">
+          <form action="#" id="questionForm">
+            <img class="questionImage" src="./assets/img/pc_mac.png" alt="Comparison Picture">
+            <p>
+              <input class="with-gap questionButtons" name="question1" type="radio" id="response1_1" value="PC"/>
+              <label for="response1_1">PC</label>
+            </p>
+            <p>
+              <input class="with-gap questionButtons" name="question1" type="radio" id="response1_2" value="Mac"/>
+              <label for="response1_2">Mac</label>
+            </p>
+            <hr noshade>
+
+            <img class="questionImage" src="./assets/img/ios_andriod.png" alt="Comparison Picture">
+            <p>
+              <input class="with-gap questionButtons" name="question2" type="radio" id="response2_1" value="iOS"/>
+              <label for="response2_1">iOS</label>
+            </p>
+            <p>
+              <input class="with-gap questionButtons" name="question2" type="radio" id="response2_2" value="Android"/>
+              <label for="response2_2">Android</label>
+            </p>
+            <hr noshade>
+
+            <img class="questionImage" src="./assets/img/angular_react.png" alt="Comparison Picture">
+            <p>
+              <input class="with-gap questionButtons" name="question3" type="radio" id="response3_1" value="React"/>
+              <label for="response3_1">React</label>
+            </p>
+            <p>
+              <input class="with-gap questionButtons" name="question3" type="radio" id="response3_2" value="Angular"/>
+              <label for="response3_2">Angular</label>
+            </p>
+            <hr noshade>
+
+            <img class="questionImage" src="./assets/img/mysql_sequelize.png" alt="Comparison Picture">
+            <p>
+              <input class="with-gap questionButtons" name="question4" type="radio" id="response4_1" value="mySQL"/>
+              <label for="response4_1">mySQL</label>
+            </p>
+            <p>
+              <input class="with-gap questionButtons" name="question4" type="radio" id="response4_2" value="Sequelize"/>
+              <label for="response4_2">Sequelize</label>
+            </p>
+            <hr noshade>
+
+            <img class="questionImage" src="./assets/img/node_php.png" alt="Comparison Picture">
+            <p>
+              <input class="with-gap questionButtons" name="question5" type="radio" id="response5_1" value="Node.js"/>
+              <label for="response5_1">Node.js</label>
+            </p>
+            <p>
+              <input class="with-gap questionButtons" name="question5" type="radio" id="response5_2" value="PHP"/>
+              <label for="response5_2">PHP</label>
+            </p>
+            <hr noshade>
+
+            <img class="questionImage" src="./assets/img/front_back.png" alt="Comparison Picture">
+            <p>
+              <input class="with-gap questionButtons" name="question6" type="radio" id="response6_1" value="Front-End"/>
+              <label for="response6_1">Front-End</label>
+            </p>
+            <p>
+              <input class="with-gap questionButtons" name="question6" type="radio" id="response6_2" value="Back-End"/>
+              <label for="response6_2">Back-End</label>
+            </p>
+            <hr noshade>
+
+            <!-- Undoing the changes below -->
+            <!-- <div class="row">
+              <div class="input-field col s12">
+                <a href="swipe" id="questions-link">
+                  <div class="btn waves-effect waves-light submit_btn inline center-align">
+                    Submit
+                  </div>
+                </a>
+              </div>
+            </div> -->
+
+            <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
+              <!-- <i class="material-icons right">send</i> -->
+            </button>
+
+          </form>
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <script src="./assets/js/questions.js"></script>
+</body>
+
+</html>
