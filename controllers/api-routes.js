@@ -11,15 +11,15 @@ module.exports = function(app) {
   app.use(bodyParser.json({limit: '50mb'}));
   app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-  app.get("/api/users", function(req, res) {
+app.get("/api/users", function(req, res) {
     db.User.findAll({
       order: [
-      ['matchpoints', 'DESC']
-      ]
+            ['matchpoints', 'DESC']
+        ]
     }).then(function(users) {
-      res.json(users);
-    });
+    res.json(users);
   });
+});
 
 // POST route for saving new user info
 app.post("/api/users", function(req, res) {
@@ -45,17 +45,31 @@ app.post("/api/users", function(req, res) {
   });
 });
 
-  // PUT route for updating users
-  app.put("/api/users:id", function(req, res) {
-    db.User.update(req.body,
+// // PUT route for updating user info
+//
+// app.put("/api/users", function(req, res) {
+//   db.User.update(
+//     req.body,
+//     {
+//       where: {
+//         id: req.body.id
+//       }
+//     }).then(function(result) {
+//       res.json(result);
+//     });
+//   });
+
+  // PUT route for updating posts
+  app.put("/api/users", function(req, res) {
+  db.User.update(req.body,
     {
       where: {
         id: req.body.id
       }
     })
-    .then(function(answerObject) {
-      res.json(answerObject);
-    });
+  .then(function(answerObject) {
+    res.json(answerObject);
+  });
   });
 
 
@@ -95,5 +109,10 @@ app.post("/api/users", function(req, res) {
   //     res.json(user);
   //   });
   // });
+
+
+  // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
+  // Find all the matches
+
 
 };
