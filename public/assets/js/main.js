@@ -95,8 +95,8 @@ $(document).ready(function() {
 	// It is written in a way to override the jTinder package's handling of this function in css
 	function populatePanes(data) {
 		console.log("Data: " + data);
-		var numUsers = 6;
-		if (data.length < 6) {
+		var numUsers = 11;
+		if (data.length < 11) {
 			numUsers = data.length;
 		}
 
@@ -114,9 +114,9 @@ $(document).ready(function() {
 
 
 			// This code adds the user info to the pane
-			$(userInfo).css({
-				'background-color':'white'
-			});
+			// $(userInfo).css({
+			// 	'background-color':'white'
+			// });
 			$(userInfo).html(data[i].name);
 		}
 	}
