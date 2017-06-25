@@ -12,20 +12,25 @@ console.log(parser.search);
 var searchName = parser.search;
 var slicedsearchName = searchName.slice(6);
 var nameOnly = slicedsearchName.replace("%20"," ");
-console.log(nameOnly);
+newNameOnly = nameOnly;
+console.log(newNameOnly);
+
+// Code below pulls in the user's information from the sql database
+function getUserData(newNameOnly) {
+	$.get("/api/users/" + newNameOnly, function(newUserData) {
+		if (newUserData) {
+		// If this profile exists, log it
+		console.log(newUserData);
+		//Code below writes the selected match's name to the package
+		$("#contactMatchImage").attr( 'src', newUserData.image);
+
+	}
+});
+}
 
 // Code below pulls in the match's info from the db
 getUserData(nameOnly);
 
-// Code below pulls in the user's information from the sql database
-function getUserData(nameOnly) {
-	$.get("/api/users/" + nameOnly, function(newUserData) {
-		if (newUserData) {
-		// If this profile exists, log it
-		console.log(newUserData);
-	}
-});
-}
 
 
 

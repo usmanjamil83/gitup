@@ -87,12 +87,13 @@ app.post("/api/users", function(req, res) {
 
   // Find specific name
   app.get("/api/users/:name", function(req, res) {
-    db.User.findAll({
+    db.User.findOne({
       where: {
-        name: req.body.name
+        name: req.params.name
       }
-    }).then(function(users) {
-      res.json(users);
+    }).then(function(user) {
+      console.log("***********************get name is running");
+      res.json(user);
     });
 
   });

@@ -33,9 +33,6 @@ $(document).ready(function() {
 		});
 	}
 
-
-
-
 	/**
 	 * jTinder initialization
 	 */
@@ -45,7 +42,7 @@ $(document).ready(function() {
 		// dislike callback
 		onDislike: function (item) {
 		    // set the status text
-		    console.log("This is 'item':");
+		    console.log("This is 'item':" + item);
 		    console.log(item[0].innerText);
 		    $('#status').html('Dislike image ' + (item.index()+1));
 		},
@@ -80,17 +77,6 @@ $(document).ready(function() {
 	// Code below contains js written by the team to compliment the code inherited from the jTinder package
 	// -----------------------------------------------------------------------------------------------------
 
-	// Declare a couple global variables
-	var imgArray = [
-	'url("./assets/img/pane/marissa_sm.jpg") no-repeat scroll center center',
-	'url("./assets/img/pane/angela2.jpg") no-repeat scroll center center',
-	'url("./assets/img/pane/jobs2.jpg") no-repeat scroll center center',
-	'url("./assets/img/pane/laurie2.jpg") no-repeat scroll center center',
-	'url("./assets/img/pane/elon2.jpg") no-repeat scroll center center',
-	'url("./assets/img/pane/arianna2.jpg") no-repeat scroll center center',
-	'url("./assets/img/pane/zuck2.jpg") no-repeat scroll center center'
-	];
-
 	// Code below populates the match cards with the matched user's information.
 	// It is written in a way to override the jTinder package's handling of this function in css
 	function populatePanes(data) {
@@ -101,15 +87,11 @@ $(document).ready(function() {
 		}
 
 		for (var i = 0; i < numUsers; i++) {
-			console.log("Data.name: " + data[i].name);
 			var paneId = "#paneId";
 			var userInfo = "#userInfo" + i;
-			console.log(paneId);
-			console.log(userInfo);
 			console.log("imageUrl: " + data[i].image.data);
 
 			$(paneId + i + "Image").attr( 'src', data[i].image);
-
 			$(paneId + i).css('background-image: url(' + data[i].image + ')');
 
 
@@ -117,7 +99,7 @@ $(document).ready(function() {
 			// $(userInfo).css({
 			// 	'background-color':'white'
 			// });
-			$(userInfo).html(data[i].name);
+			$(userInfo).html(data[i].id);
 		}
 	}
 
