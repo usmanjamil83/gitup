@@ -44,13 +44,15 @@ $(document).ready(function() {
 		    // set the status text
 		    console.log("This is 'item':" + item);
 		    console.log(item[0].innerText);
+				console.log(item[0]);
 		    $('#status').html('Dislike image ' + (item.index()+1));
 		},
 		// like callback
 		onLike: function (item) {
 			console.log("This is 'item':");
 			console.log(item);
-			window.location.replace("../contact"+"?name=" + item[0].innerText);
+			var id = $(item[0]).attr('data-id');
+			window.location.replace("../contact"+"?id=" + id);
 			console.log(item);
 			console.log(item[0].id);
 
@@ -93,13 +95,14 @@ $(document).ready(function() {
 
 			$(paneId + i + "Image").attr( 'src', data[i].image);
 			$(paneId + i).css('background-image: url(' + data[i].image + ')');
+			$(paneId + i).attr('data-id', data[i].id)
 
 
 			// This code adds the user info to the pane
 			// $(userInfo).css({
 			// 	'background-color':'white'
 			// });
-			$(userInfo).html(data[i].id);
+			$(userInfo).html(data[i].name);
 		}
 	}
 
