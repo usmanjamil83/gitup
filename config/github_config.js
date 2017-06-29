@@ -1,8 +1,8 @@
 var ids = {
   github: {
-    clientID: 'get_your_own',
-    clientSecret: 'get_your_own',
-    callbackURL: "http://127.0.0.1:3000/auth/github/callback"
+    clientID: '673bf3b8a0ecfccfebea',
+    clientSecret: '905d7fd2a30a830e65b7d27876b6bccf98a57716',
+    callbackURL: "http://localhost:443/auth/github/profile"
   },
 };
 
