@@ -1,5 +1,5 @@
 .catopusImg{
-  padding: 30px;
+	padding: 30px;
 }
 
 /*.btn-1{
@@ -10,9 +10,15 @@
 
 .btn-1-text{
   margin-top: 10px;
-}*/
+  }*/
 
-.like_function{
-  width: 250px;
-  margin: 70px;
-}
+  .like_function{
+  	width: 250px;
+  	margin: 70px;
+  }
+  #github-login{
+  	margin-left: 310px;
+  }
+  .btn{
+  	background-color: #2B2B2B;
+  }
