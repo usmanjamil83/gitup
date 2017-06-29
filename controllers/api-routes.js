@@ -2,24 +2,34 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
+var passportGithub = require('../public/assets/js/github');
 var db = require("../models");
 
 var User = db.User;
 
 module.exports = function(app) {
 
+  app.get('/auth/github', passportGithub.authenticate('github', { scope: [ 'user:email' ] }));
+
+  app.get('/auth/github/callback',
+    passportGithub.authenticate('github', { failureRedirect: '/login' }),
+    function(req, res) {
+    // Successful authentication
+    res.json(req.user);
+  });
+
   app.use(bodyParser.json({limit: '50mb'}));
   app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-app.get("/api/users", function(req, res) {
+  app.get("/api/users", function(req, res) {
     db.User.findAll({
       order: [
-            ['matchpoints', 'DESC']
-        ]
+      ['matchpoints', 'DESC']
+      ]
     }).then(function(users) {
-    res.json(users);
+      res.json(users);
+    });
   });
-});
 
 // POST route for saving new user info
 app.post("/api/users", function(req, res) {
@@ -61,15 +71,15 @@ app.post("/api/users", function(req, res) {
 
   // PUT route for updating posts
   app.put("/api/users", function(req, res) {
-  db.User.update(req.body,
+    db.User.update(req.body,
     {
       where: {
         id: req.body.id
       }
     })
-  .then(function(answerObject) {
-    res.json(answerObject);
-  });
+    .then(function(answerObject) {
+      res.json(answerObject);
+    });
   });
 
 

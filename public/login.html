@@ -10,10 +10,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+   <!-- Bootstrap Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
    <!-- Materilaize -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
    <!-- login.css -->
    <link rel="stylesheet" href="./assets/css/login.css">
+   <!-- Font Awesome -->
+   <script src="https://use.fontawesome.com/20ce793375.js"></script>
    <title>gitUp Login</title>
 </head>
 <body>
@@ -24,12 +29,15 @@
          </div>
       </div>
       <div class="row">
-         <div class="col s12 m12 center-align">
-            <a id ="begin_btn" class="waves-effect waves-light btn btn-1" href="profile">
+         <div class="col s4 m4 center-align" id="github-login">
+            <a href="/auth/github" class="btn btn-block btn-github">
+               <span class="fa fa-github"></span> | Sign in with Github
+            </a>
+            <!-- <a id ="begin_btn" class="waves-effect waves-light btn btn-1" href="profile">
                <div class="btn-1-text">
                   Click to Meet
                </div>
-            </a>
+            </a> -->
          </div>
       </div>
       <div class="row">

@@ -1,8 +1,10 @@
 // gitup server setup
 var express = require("express");
+var session = require('express-session');
 // var http = require('http').Server(app);
 // var io = require('socket.io')(http);
 var bodyParser = require("body-parser");
+var passport = require('passport');
 // Requiring our models for syncing
 var db = require("./models");
 
@@ -14,6 +16,14 @@ var io = require('socket.io').listen(app.listen(PORT));
 app.use(express.static(process.cwd() + "/public"));
 
 // app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(session({
+	secret: 'keyboard cat',
+	resave: true,
+	saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
