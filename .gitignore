@@ -58,4 +58,4 @@ typings/
 .env
 
 #github info
-.github_config.js
+github_config.js
