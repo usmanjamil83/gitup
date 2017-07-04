@@ -99,6 +99,7 @@ $(document).ready(function() {
 
     // Gets response data for a existing users
     function getAllUserData() {
+      // jQuery('#myModal').modal();
       $.get("/api/users", function(data) {
         matchUser(data);
         console.log("Descent should be here");
