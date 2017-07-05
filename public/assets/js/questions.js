@@ -3,6 +3,7 @@ $(document).ready(function() {
   // Create global variables including those to hold responses to questions
   var id = 0;
   var friendName = "";
+  var targetGender = "";
   var matchpoints = 0;
   var newFriendObj;
   var q01Answer = 0;
@@ -45,6 +46,8 @@ $(document).ready(function() {
       if (newUserData) {
       // If this post exists, prefill our cms forms with its data
       console.log(newUserData);
+      targetGender = newUserData.targetGender;
+      console.log("This user is seeking a ", targetGender);
     }
   });
   }
@@ -81,7 +84,7 @@ $(document).ready(function() {
 
     updateUser(answerObject);
 
-    // Update a given post, bring user to the blog page when done
+    // Write responses to the DB
     function updateUser(answerObject) {
       $.ajax({
         method: "PUT",
@@ -102,7 +105,6 @@ $(document).ready(function() {
       // jQuery('#myModal').modal();
       $.get("/api/users", function(data) {
         matchUser(data);
-        console.log("Descent should be here");
         console.log(data);
       });
     }
@@ -133,6 +135,11 @@ $(document).ready(function() {
           if (currentResponses[j] == data[i][answercount]) {
             matchpoints = matchpoints + 1;
           }
+          if (data[i].gender != targetGender) {
+            matchpoints = 0;
+            console.log("jloop targetGender: ", targetGender);
+            console.log("jloop data i gender: ", data[i].gender);
+          }
 
           console.log("Current points coming out of the if statement for j loop: ", matchpoints);
           console.log("Where we are in the j loop: ", j);
@@ -147,6 +154,10 @@ $(document).ready(function() {
           if (currentResponses[k] !== data[i][answercount2]) {
             matchpoints = matchpoints + 1;
           }
+          if (data[i].gender != targetGender) {
+            matchpoints = 0;
+          }
+
           console.log("Current points coming out of the if statement for k loop: ", matchpoints);
           console.log("Where we are in the j loop: ", k);
         }

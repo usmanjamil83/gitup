@@ -1,4 +1,4 @@
-//combined with marvin
+// Pull in all required packages
 
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -40,6 +40,7 @@ app.post("/api/users", function(req, res) {
     name: userData.name,
     age: userData.age,
     gender: userData.gender,
+    targetGender: userData.targetGender,
     quote: userData.quote,
     image: userData.image,
     answer1: userData.answer1,
@@ -69,7 +70,7 @@ app.post("/api/users", function(req, res) {
 //     });
 //   });
 
-  // PUT route for updating posts
+  // PUT route for updating profile
   app.put("/api/users", function(req, res) {
     db.User.update(req.body,
     {
@@ -107,8 +108,6 @@ app.post("/api/users", function(req, res) {
     });
 
   });
-
-
 
   // // Find all the matches
   // app.get("/api/users/:match", function(req, res) {

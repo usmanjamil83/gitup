@@ -61,10 +61,29 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-field col s12 m12">
-						<input class="validate" id="gender" name="gender" placeholder="Male" type="text"> <label for="gender">Gender</label>
+					<div class="input-field col s12 m12 validate">
+						<select id="gender" class="validate">
+							<option id="genderPlaceholder" value="Male" disabled selected></option>
+							<option value="Female">Female</option>
+							<option value="Male">Male</option>
+						</select>
+						<label>Your Gender</label>
+					</div>
+					<!-- <div class="input-field col s12 m12">
+						<input class="validate" id="gender" name="gender" placeholder="Female / Male" type="text"> <label for="gender">Gender</label>
+					</div> -->
+				</div>
+				<div class="row">
+					<div class="input-field col s12 m12 validate" >
+						<select id="targetGender" class="validate">
+							<option id="otherGenderPlaceholder" value="Female" disabled selected></option>
+							<option value="Female">Female</option>
+							<option value="Male">Male</option>
+						</select>
+						<label>Gender You're Interested In Meeting</label>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="input-field col s12 m12">
 						<a href="questions" id="questions-link">

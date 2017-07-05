@@ -31,6 +31,7 @@ $(document).ready(function() {
             name: $("#name").val(),
             quote: $("#quote").val(),
             gender: $("#gender").val(),
+            targetGender: $("#targetGender").val(),
             image: imgContent,
             age: $("#age").val()
         };

@@ -26,3 +26,17 @@ body {
 #messages li:nth-child(odd) {
 	background: #eee;
 }
+
+/*Styling for the interest icons on the page*/
+.interests {
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+#matchMessage {
+	text-align: center;
+}
+
+#chat_button {
+	margin-bottom: 20px;
+}

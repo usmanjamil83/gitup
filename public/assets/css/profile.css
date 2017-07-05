@@ -4,7 +4,7 @@ form{
 }
 
 .brand-logo{
-margin-left: 10px;  
+margin-left: 10px;
 }
 
 .catopus{
@@ -34,4 +34,8 @@ margin-left: 10px;
 
 .foot{
   color: gray;
+}
+
+#genderPlaceholder, .disabled {
+  color: #bdbdbd;
 }

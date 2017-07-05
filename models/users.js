@@ -22,6 +22,12 @@ module.exports = function(sequelize, DataTypes) {
      //   notNull: true
      // }
    },
+   targetGender: {
+     type: DataTypes.STRING,
+     // validate: {
+     //   notNull: true
+     // }
+   },
    quote: {
      type: DataTypes.STRING,
      defaultValue: "Let's git up!",
