@@ -15,22 +15,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <!-- Contact CSS File -->
   <link rel="stylesheet" href="./assets/css/questions.css">
-
   <title>gitUp Questions</title>
 </head>
 
 <body>
   <div class="container">
-    <nav>
-      <div class="nav-wrapper  teal teal lighten-2">
-        <a href="/" class="brand-logo left">gitUp</a>
-        <img src="./assets/img/logo_notxt_final.png" class="brand-logo center catopus"/>
-        <ul id="nav-mobile" class="right">
-          <li><a href="/">Home</a></li>
-          <li><a href="profile">Profile</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div id="app"></div>
+    
     <div class="grid-example col s12 m7">
       <span class="flow-text">
         <div class = "row">
@@ -110,21 +101,9 @@
             </p>
             <hr noshade>
 
-            <!-- Undoing the changes below -->
-            <!-- <div class="row">
-              <div class="input-field col s12">
-                <a href="swipe" id="questions-link">
-                  <div class="btn waves-effect waves-light submit_btn inline center-align">
-                    Submit
-                  </div>
-                </a>
-              </div>
-            </div> -->
-
             <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
               <!-- <i class="material-icons right">send</i> -->
             </button>
-
           </form>
         </div>
       </span>
@@ -145,23 +124,22 @@
                 <div class="circle-clipper left">
                   <div class="circle"></div>
                 </div><div class="gap-patch">
-                  <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                  <div class="circle"></div>
-                </div>
-              </div>
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+              <div class="circle"></div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-  </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
 
   <script src="./assets/js/questions.js"></script>
-</body>
 
+  <!-- for react.js -->
+  <script src="./assets/js/bundle.js"></script>
+</body>
 </html>

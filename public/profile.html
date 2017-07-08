@@ -16,16 +16,7 @@
 <body>
 
 	<div class="container">
-		<nav>
-			<div class="nav-wrapper  teal teal lighten-2">
-				<a href="/" class="brand-logo left">gitUp</a>
-				<img src="./assets/img/logo_notxt_final.png" class="brand-logo center catopus"/>
-				<ul id="nav-mobile" class="right">
-					<li><a href="/">Home</a></li>
-					<li><a href="profile">Profile</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div id="app"></div>		
 		<form action="/api/users" class="col s12" method="post">
 			<div class="img_container" id="myPhotoDiv">
 				<div class="row">
@@ -89,13 +80,17 @@
 						<a href="questions" id="questions-link">
 							<div class="btn waves-effect waves-light submit_btn">
 								Submit
-							</div></a>
-						</div>
+							</div>
+						</a>
 					</div>
 				</div>
-			</form>
-		</div>
-		<script src="./assets/js/profile.js">
-		</script>
-	</body>
-	</html>
+			</div>
+		</form>
+	</div>
+	<script src="./assets/js/profile.js">
+	</script>
+
+	<!-- for react.js -->
+	<script src="./assets/js/bundle.js"></script>
+</body>
+</html>

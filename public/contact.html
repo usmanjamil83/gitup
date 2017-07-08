@@ -21,51 +21,43 @@
 
 <body>
   <div class="container">
-    <nav>
-      <div class="nav-wrapper  teal teal lighten-2">
-        <a href="/" class="brand-logo left">gitUp</a>
-        <img src="./assets/img/logo_notxt_final.png" class="brand-logo center catopus" />
-        <ul id="nav-mobile" class="right">
-          <li><a href="/">Home</a></li>
-          <li><a href="profile">Profile</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div id="app"></div>    
     <div class="grid-example col s12 m7">
       <span class="flow-text">
-      <div class = "row">
-        <div class="col s12 m7 offset-m3">
-          <h3 class="center-align" id="contactHeader">It's time to gitUp!</h3>
-        </div>
-      </div>
-      <!-- <div class="row">
-        <img id="contactMatchImage" alt="Your match">
-      </div> -->
-      <div class="row">
-        <div class="col s12 m7 offset-m3">
-          <div class="card">
-            <div class="card-image">
-              <img id="contactMatchImage" alt="Your match">
-              <span id="matchName" class="card-title">Card Title</span>
-          </div>
-          <div class="card-content" id="matchMessage">
-            <p>Use the chat below to gitUp!</p>
-          </div>
-          <div class="center-align" id="matchInterests">
-            <!-- <img  alt="Your match's interests"> -->
+        <div class = "row">
+          <div class="col s12 m7 offset-m3">
+            <h3 class="center-align" id="contactHeader">It's time to gitUp!</h3>
           </div>
         </div>
+        <!-- <div class="row">
+          <img id="contactMatchImage" alt="Your match">
+        </div> -->
+        <div class="row">
+          <div class="col s12 m7 offset-m3">
+            <div class="card">
+              <div class="card-image">
+                <img id="contactMatchImage" alt="Your match">
+                <span id="matchName" class="card-title">Card Title</span>
+              </div>
+              <div class="card-content" id="matchMessage">
+                <p>Use the chat below to gitUp!</p>
+              </div>
+              <div class="center-align" id="matchInterests">
+                <!-- <img  alt="Your match's interests"> -->
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-  </span>
-  </div>
-  <ul id="messages"></ul>
-  <form action="">
-    <input id="m" autocomplete="off" placeholder="Chat here" />
-    <button class="btn waves-effect waves-light submit_btn" id="chat_button">Send</button>
-  </form>
+      </span>
+    </div>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" placeholder="Chat here" />
+      <button class="btn waves-effect waves-light submit_btn" id="chat_button">Send</button>
+    </form>
   </div>
   <script src="./assets/js/contact.js"></script>
+  <!-- for react.js -->
+  <script src="./assets/js/bundle.js"></script>
 </body>
-
 </html>
