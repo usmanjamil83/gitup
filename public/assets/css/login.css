@@ -1,24 +1,15 @@
 .catopusImg{
-	padding: 30px;
+  padding: 30px;
 }
-
-/*.btn-1{
-	width: 317px;
-	height: 52px;
-  margin: 40px;
+.like_function{
+  width: 250px;
+  margin: 70px;
+  margin-top: 50px;
 }
-
-.btn-1-text{
-  margin-top: 10px;
-  }*/
-
-  .like_function{
-  	width: 250px;
-  	margin: 70px;
-  }
-  #github-login{
-  	margin-left: 310px;
-  }
-  .btn{
-  	background-color: #2B2B2B;
-  }
+.btn{
+ background-color: #2B2B2B;
+}
+#begin_btn{
+  width: 250px;
+  margin-top: -20px;
+}
