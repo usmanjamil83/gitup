@@ -7,8 +7,6 @@ var Header = require("./components/Header");
 
 ReactDOM.render(
 // Here we dump all of the components into a single main-container
-  <div>
-    <Header />
-  </div>
+  <Header />
   , document.getElementById("app")
 );

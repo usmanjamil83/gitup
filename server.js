@@ -40,6 +40,6 @@ io.on('connection', function(socket){
 });
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync().then(function() {
+db.sequelize.sync({}).then(function() {
 	console.log("App listening on PORT " + PORT);
 });
