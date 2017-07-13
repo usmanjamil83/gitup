@@ -5,7 +5,7 @@ var React = require("react");
 var Header = React.createClass({
   render: function() {
     return (
-      <div className="nav-wrapper  teal teal lighten-2">
+      <div className="nav-wrapper  teal teal  z-depth-0 lighten-2">
         <a href="/" className="brand-logo left">gitUp</a>
         <img src="./assets/img/logo_notxt_final.png" className="brand-logo center catopus"/>
         <ul id="nav-mobile" className="right">

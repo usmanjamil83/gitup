@@ -37,8 +37,8 @@ $(document).ready(function() {
 
   getUserData(idOnly);
 
-  $("#contactHeader").html("id = '" + nameOnly + "'");
-  $("#contactSubheader").html("Tell the world about #"+ nameOnly);
+  // Code below populates the greating message for the user
+  $("#contactHeader").html("var user = '" + nameOnly + "'");
 
   // Code below pulls in the user's information from the sql database
   function getUserData(idOnly) {
@@ -58,6 +58,7 @@ $(document).ready(function() {
   // Capture the form inputs
   $("#submit").on("click", function(event) {
     event.preventDefault();
+    $(".overlay").css("visibility", "visible");
 
     currentAnswer1 = $('input[name="question1"]:checked').val();
     currentAnswer2 = $('input[name="question2"]:checked').val();

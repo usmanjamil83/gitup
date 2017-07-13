@@ -1,3 +1,12 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+nav {
+  background-color: #4db6ac !important;
+  box-shadow: none;
+}
+
 .nav_img{
   width: 150px;
   height: 150px;

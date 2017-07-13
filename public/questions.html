@@ -10,9 +10,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Materilaize -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <!-- Contact CSS File -->
   <link rel="stylesheet" href="./assets/css/questions.css">
   <title>gitUp Questions</title>
@@ -20,16 +20,32 @@
 
 <body>
   <div class="container">
-    <nav id="app"></nav>
+    <div class="overlay visable">
+      <div class="spinnerBox">
+        <div class="preloader-wrapper big active center-align spinnerCircle">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="container">
+    <nav id="app"></nav>
     <div class="grid-example col s12 m7">
       <span class="flow-text">
         <div class = "row">
           <div class="col s12 m7 offset-m3">
             <h3 class="center-align header" id="contactHeader">id = "You"</h3>
-            <p class="center-align header" id="contactSubheader">Tell the world about #You</p>
-            <p class="center-align header" id="contactMessage">Please pick one of two from each of the six pairs below.</p>
-            <p class="center-align header" id="contactMessage2">We'll use your picks to find someone for you to gitUp with ;-)</p>
+            <p class="center-align header" id="contactMessage">Please pick one of two from each of the six pairs below.
+              We'll use your picks to find someone for you to gitUp with <br> ;-)</p>
           </div>
         </div>
         <!-- Code below is a form for the user questions -->
@@ -101,7 +117,7 @@
             </p>
             <hr noshade>
 
-            <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
+            <button class="btn waves-effect waves-light z-depth-0" type="submit" id="submit" name="action">Submit
               <!-- <i class="material-icons right">send</i> -->
             </button>
           </form>
