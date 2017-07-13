@@ -80,3 +80,20 @@ hr {
   right: 0%;
   margin: 0 auto;
 }
+
+/*Styling for footer*/
+.gitFooter {
+  background-color: #4db6ac !important;
+  margin-top: 100px;
+  padding-top: 0;
+}
+
+.footerText {
+  margin-bottom: 0;
+}
+
+/*Styling for form to remove negative margins*/
+#gitForm {
+  margin-left: 0;
+  margin-right: 0;
+}
