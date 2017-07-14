@@ -49,3 +49,14 @@ body {
 #chat_button {
 	margin-bottom: 20px;
 }
+
+/*Styling for footer*/
+.gitFooter {
+  background-color: #4db6ac !important;
+  margin-top: 100px;
+  padding-top: 0;
+}
+
+.footerText {
+  margin-bottom: 0;
+}
