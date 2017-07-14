@@ -13,26 +13,26 @@ module.exports = function(app) {
 
   app.get('/auth/github/callback',
     passportGithub.authenticate('github', { failureRedirect: '/login' }),
-    function(req, res) {
+    function(req, res, next) {
     // Successful authentication
-    res.json(req.user);
+    res.status(404).json(req.user);
   });
 
   app.use(bodyParser.json({limit: '50mb'}));
   app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-  app.get("/api/users", function(req, res) {
+  app.get("/api/users", function(req, res, next) {
     db.User.findAll({
       order: [
       ['matchpoints', 'DESC']
       ]
     }).then(function(users) {
-      res.json(users);
+      res.status(200).json(users);
     });
   });
 
 // POST route for saving new user info
-app.post("/api/users", function(req, res) {
+app.post("/api/users", function(req, res, next) {
   var userData = req.body;
   console.log(userData);
 
@@ -51,14 +51,14 @@ app.post("/api/users", function(req, res) {
     answer6: userData.answer6,
     matchpoints: userData.matchpoints,
   }).then(function(data) {
-    res.json(data);
+    res.status(200).json(data);
 
   });
 });
 
 // // PUT route for updating user info
 //
-// app.put("/api/users", function(req, res) {
+// app.put("/api/users", function(req, res, next) {
 //   db.User.update(
 //     req.body,
 //     {
@@ -66,12 +66,12 @@ app.post("/api/users", function(req, res) {
 //         id: req.body.id
 //       }
 //     }).then(function(result) {
-//       res.json(result);
+//       res.status(200).json(result);
 //     });
 //   });
 
   // PUT route for updating profile
-  app.put("/api/users", function(req, res) {
+  app.put("/api/users", function(req, res, next) {
     db.User.update(req.body,
     {
       where: {
@@ -79,38 +79,38 @@ app.post("/api/users", function(req, res) {
       }
     })
     .then(function(answerObject) {
-      res.json(answerObject);
+      res.status(200).json(answerObject);
     });
   });
 
 
   // Find specific id
-  app.get("/api/users/:id", function(req, res) {
+  app.get("/api/users/:id", function(req, res, next) {
     db.User.findOne({
       where: {
         id: req.params.id
       }
     }).then(function(user) {
-      res.json(user);
+      res.status(200).json(user);
     });
 
   });
 
   // Find specific name
-  app.get("/api/users/:name", function(req, res) {
+  app.get("/api/users/:name", function(req, res, next) {
     db.User.findOne({
       where: {
         name: req.params.name
       }
     }).then(function(user) {
       console.log("***********************get name is running");
-      res.json(user);
+      res.status(200).json(user);
     });
 
   });
 
   // // Find all the matches
-  // app.get("/api/users/:match", function(req, res) {
+  // app.get("/api/users/:match", function(req, res, next) {
   //   db.Users.findOne({
   //     where: {
   //       match: req.params.match
@@ -119,10 +119,5 @@ app.post("/api/users", function(req, res) {
   //     res.json(user);
   //   });
   // });
-
-
-  // TEMPORARY!!! FINDING ALL LOCAL, HARD-CODED MATCHES IN sampleusers.js
-  // Find all the matches
-
 
 };
