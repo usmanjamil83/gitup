@@ -2,24 +2,15 @@ var passport = require('passport');
 var GitHubStrategy = require('passport-github2').Strategy;
 
 var Github = require('../../../models/github.js');
-var config = {
-  github: {
-    clientID: process.env.clientID,
-    clientSecret: process.env.clientSecret,
-    callbackURL: process.env.callbackURL
-  }
-};
-if (process.env.NODE_ENV !== 'production') {
-  config = require('../../../config/github_config.js');
-}
-
+var config = require('../../../config/github_config.js');
 var init = require('./github_init');
+
+
 passport.use(new GitHubStrategy({
   clientID: config.github.clientID,
   clientSecret: config.github.clientSecret,
   callbackURL: config.github.callbackURL
 },
-
 function(accessToken, refreshToken, profile, done) {
 
   var searchQuery = {
