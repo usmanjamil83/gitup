@@ -14,13 +14,12 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 var init = require('./github_init');
-
-
 passport.use(new GitHubStrategy({
   clientID: config.github.clientID,
   clientSecret: config.github.clientSecret,
   callbackURL: config.github.callbackURL
 },
+
 function(accessToken, refreshToken, profile, done) {
 
   var searchQuery = {

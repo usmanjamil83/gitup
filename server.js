@@ -12,7 +12,6 @@ var PORT = process.env.PORT || 443;
 
 var io = require('socket.io').listen(app.listen(PORT));
 app.use(express.static(process.cwd() + "/public"));
-
 // app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(session({
