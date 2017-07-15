@@ -29,8 +29,8 @@ body {
 
 /* Wrapper with padding */
 .wrap  {
-    height: 450px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
     padding: 5%;
     margin:0 auto;
 }
