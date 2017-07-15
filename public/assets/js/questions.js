@@ -38,7 +38,7 @@ $(document).ready(function() {
   getUserData(idOnly);
 
   // Code below populates the greating message for the user
-  $("#contactHeader").html("var user = '" + nameOnly + "'");
+  $("#contactHeader").html(nameOnly);
 
   // Code below pulls in the user's information from the sql database
   function getUserData(idOnly) {
