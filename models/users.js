@@ -10,11 +10,11 @@ module.exports = function(sequelize, DataTypes) {
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      // validate: {
-      //   len: [2],
-      //   min: 18,
-      //   max: 99,
-      // }
+      validate: {
+        len: [2],
+        min: 18,
+        max: 99,
+      }
     },
     gender: {
       type: DataTypes.STRING,
